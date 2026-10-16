@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+  --ink: #1e2925;
+  --muted: #737971;
+  --accent: #b47a32;
+  --paper: #f7f5ef;
+  --rule: #d9d7cd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: repeating-linear-gradient(0deg, #f7f5ef 0 2px, #f8f7f2 2px 5px);
+}
+
+body {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 7.2%;
+  color: var(--ink);
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  color: var(--ink);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.issue-label,
+.eyebrow,
+.site-footer {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.issue-label {
+  font-style: italic;
+}
+
+.poster {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.82fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 120px);
+  max-width: 1080px;
+  margin: 72px auto 80px;
+}
+
+.poster-artwork {
+  margin: 0;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.poster-copy {
+  padding: 12px 0;
+}
+
+.eyebrow {
+  margin: 0 0 24px;
+  color: var(--accent);
+  font-style: italic;
+}
+
+h1 {
+  max-width: 480px;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.body-copy {
+  margin: 26px 0 0;
+  color: #535b55;
+  font-size: 0.82rem;
+  line-height: 2;
+}
+
+.signoff {
+  margin: 28px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.site-footer {
+  padding: 20px 0 28px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.site-footer span {
+  padding: 0 8px;
+  color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 0 6%;
+  }
+
+  .site-header {
+    min-height: 72px;
+  }
+
+  .issue-label {
+    font-size: 0.62rem;
+  }
+
+  .poster {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    max-width: 560px;
+    margin: 38px auto 48px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+    line-height: 1.5;
+  }
+
+  .poster-copy {
+    padding: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .wordmark {
+    font-size: 0.8rem;
+  }
+
+  .issue-label {
+    max-width: 120px;
+    text-align: right;
+  }
+}
